@@ -60,6 +60,13 @@ return require('packer').startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
   -- lsp
   use 'neovim/nvim-lspconfig'
-
+  -- greeter
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+}
 end)
 
