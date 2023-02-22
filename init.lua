@@ -10,8 +10,10 @@ require('init-bufferline')
 -- colorizer
 require('colorizer').setup()
 -- colorScheme
-vim.cmd[[colorscheme tokyonight-storm]]
+require('colorscheme')
 -- lualine
 require('lualine').setup()
 -- lsp manager
 require('init-mason')
+-- treesitter
+require('init-treesitter')

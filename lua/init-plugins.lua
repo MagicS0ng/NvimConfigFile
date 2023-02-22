@@ -8,8 +8,10 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
   -- colorScheme
-  use 'folke/tokyonight.nvim'
-    use 'hrsh7th/cmp-buffer'
+  -- use 'folke/tokyonight.nvim'
+  -- use "EdemEast/nightfox.nvim" 
+  use 'sainnhe/everforest' 
+  use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
@@ -30,8 +32,6 @@ return require('packer').startup(function(use)
   "windwp/nvim-autopairs",
   config = function() require("nvim-autopairs").setup {} end
   }
-
-  -- using packer.nvim
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   -- File Tree
   use {
