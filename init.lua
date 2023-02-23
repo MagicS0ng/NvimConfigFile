@@ -1,5 +1,6 @@
 require('basic')
--- require('keymaps')
+-- keymap
+require('keymaps')
 require('init-lualine')
 require('init-plugins')
 require('init-cmp')
