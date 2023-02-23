@@ -2,7 +2,7 @@ require('basic')
 -- require('keymaps')
 require('init-lualine')
 require('init-plugins')
-require('init-lsp')
+require('init-cmp')
 require('init-NvimTree')
 require('init-vimtex')
 -- bufferline
