@@ -18,4 +18,5 @@ require('lualine').setup()
 require('init-mason')
 -- treesitter
 require('init-treesitter')
-
+-- lsp
+require('init-lsp')
