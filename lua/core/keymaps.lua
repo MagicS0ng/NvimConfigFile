@@ -25,7 +25,7 @@ keymaps.set("n", "<C-j>", "<C-w>j", { desc = "move to split below" })
 keymaps.set("n", "<C-k>", "<C-w>k", { desc = "move to split above" })
 
 -- telescope
-keymaps.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "telescope find file" })
+-- keymaps.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "telescope find file" })
 
 -- move buffer
 keymaps.set("n", "<S-h>", ":BufferLineCyclePrev<cr>", {desc = "Prev Buffer"})

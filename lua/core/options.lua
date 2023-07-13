@@ -50,6 +50,8 @@ opt.signcolumn = "yes"
 opt.formatoptions:append { 'r' }
 opt.termguicolors = true
 
+opt.undofile = true
+opt.undodir = vim.fn.expand('$HOME/.local/share/nvim/undo')
 
 -- not sure
 opt.pumblend = 10
