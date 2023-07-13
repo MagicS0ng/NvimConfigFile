@@ -1,4 +1,6 @@
 local db = require("dashboard")
+local stats = require("lazy").stats()
+local ms = (math.floor(stats.startuptime *100 + 0.5) /100 )
 db.setup({
   theme = "doom",
   config = {
@@ -18,10 +20,23 @@ db.setup({
     '                                   ',
     '                                   ',
     '                                   ',
+    '                                   ',
+    '                                   ',
+    '                                   ',
     },
     center = {
       {
-        icon = '    ',
+        icon = '    ',
+        icon_hl = 'Title',
+        desc = 'New File             ',
+        desc_hl = 'String',
+        key = 'a',
+        keymap = 'SPC f n',
+        key_hl = 'Number',
+        action = 'lua print(1)'
+      },
+      {
+        icon = '    ',
         icon_hl = 'Title',
         desc = 'Find File           ',
         desc_hl = 'String',
@@ -31,16 +46,36 @@ db.setup({
         action = 'lua print(2)'
       },
       {
-        icon = "    ",
-        icon_hl = 'Title', 
+        icon = "    ",
+        icon_hl = 'Title',
         desc = "File Explorer",
         desc_hl = "String",
         key = 'c',
         keymap = 'SPC e',
         key_hl = 'Number',
         action = 'lua print(3)'
-      }
+      },
+      {
+        icon = "󰒲    ",
+        icon_hl = 'Title',
+        desc = "Lazy",
+        desc_hl = "String",
+        key = 'd',
+        keymap = 'SPC l',
+        key_hl = 'Number',
+        action = 'lua print(4)'
+      },
+      {
+        icon = "    ",
+        icon_hl = 'Title',
+        desc = "Recent Files",
+        desc_hl = "String",
+        key = 'e',
+        keymap = 'SPC fo',
+        key_hl = 'Number',
+        action = 'lua print(5)'
     },
-    footer = { "Go Getting More Fun!" },
+    },
+    footer = { "Neovim loaded "  .. stats.count .. " plugins in " ..ms.. " ms" },
   }
 })
