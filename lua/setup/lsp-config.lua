@@ -18,6 +18,52 @@ nvim_lsp.pyright.setup{
   cmd = { "pyright-langserver", "--stdio" }
 }
 
+nvim_lsp.texlab.setup{
+  cmd = { "texlab" },
+  filetype = { "tex", "plaintex", "bib" },
+  settings = {
+    texlab = {
+      auxDirectory = ".",
+      bibtexFormatter = "texlab",
+      build = {
+        args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+        executable = "latexmk",
+        forwardSearchAfter = false,
+        onSave = false
+      },
+      chktex = {
+        onEdit = false,
+        onOpenAndSave = false
+      },
+      diagnosticsDelay = 300,
+      formatterLineLength = 80,
+      forwardSearch = {
+        args = {}
+      },
+      latexFormatter = "latexindent",
+      latexindent = {
+        modifyLineBreaks = false
+      }
+    }
+  }
+}
+
+--nvim_lsp.rust_analyzer.setup{
+  -- capabilities = capabilities;
+--  cmd = { "rust-analyzer" },
+--  filetype = { "rust" },
+--  settings = {
+--   ['rust-analyzer'] = {
+--      diagnostics = {
+--        enable = true;
+--     }
+--    }
+--  }
+--}
+
+
+
+
 nvim_lsp.clangd.setup{
   capabilities = capabilities,
   cmd = { "clangd" },

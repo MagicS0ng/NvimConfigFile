@@ -74,7 +74,17 @@ db.setup({
         keymap = 'SPC fo',
         key_hl = 'Number',
         action = 'lua print(5)'
-    },
+      },
+      {
+        icon = "    ",
+        icon_hl = "Title",
+        desc = "Find word",
+        desc_hl = "String",
+        key = 'f',
+        keymap = "SPC fw",
+        key_hl = 'Number',
+        action = 'lua print(6)'
+      }
     },
     footer = { "Neovim loaded "  .. stats.count .. " plugins in " ..ms.. " ms" },
   }
